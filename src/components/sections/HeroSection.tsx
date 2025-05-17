@@ -10,13 +10,12 @@ export default function HeroSection() {
     <section className="relative h-[calc(100vh-5rem)] min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
       {/* Background Image */}
       <Image
-        src="https://placehold.co/1920x1080.png"
+        src="/images/hero-background.jpg" // Updated image path
         alt="Business professionals in a modern tech environment"
         layout="fill"
         objectFit="cover"
         quality={80}
         className="z-0"
-        data-ai-hint="business meeting technology"
         priority
       />
       {/* Overlay */}
@@ -39,7 +38,7 @@ export default function HeroSection() {
               Learn More
             </Button>
           </Link>
-          <Link href="#contact" passHref legacyBehavior>
+          <Link href="#contact-form" passHref legacyBehavior>
             <Button
               variant="outline"
               size="lg"
@@ -72,4 +71,3 @@ export default function HeroSection() {
     </section>
   );
 }
-

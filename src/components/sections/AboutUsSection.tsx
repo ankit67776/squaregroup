@@ -28,14 +28,13 @@ export default function AboutUsSection() {
           <div className="order-1 md:order-2 group animate-slide-in-right animation-delay-200">
             <Card className="overflow-hidden shadow-xl rounded-lg transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 transform hover:scale-105 bg-card">
               <CardContent className="p-0">
-                <div className="relative w-full aspect-[4/3]"> {/* Aspect ratio 600/450 = 4/3 */}
+                <div className="relative w-full aspect-[4/3]">
                   <Image
-                    src="https://placehold.co/600x450.png"
-                    alt="Diverse team engaged in a collaborative business discussion in a modern office setting."
+                    src="/images/about-us-team.jpg" // Updated image path
+                    alt="Diverse team engaged in a collaborative business discussion"
                     layout="fill"
                     objectFit="cover"
                     className="transition-transform duration-500 group-hover:scale-110"
-                    data-ai-hint="team collaboration business"
                   />
                 </div>
               </CardContent>
@@ -81,4 +80,3 @@ export default function AboutUsSection() {
     </section>
   );
 }
-
