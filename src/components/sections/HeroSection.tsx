@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -10,12 +11,12 @@ export default function HeroSection() {
       {/* Background Image */}
       <Image
         src="https://placehold.co/1920x1080.png"
-        alt="Technology Innovation Background"
+        alt="Business professionals in a modern tech environment"
         layout="fill"
         objectFit="cover"
         quality={80}
         className="z-0"
-        data-ai-hint="technology abstract"
+        data-ai-hint="business meeting technology"
         priority
       />
       {/* Overlay */}
@@ -33,7 +34,7 @@ export default function HeroSection() {
           <Link href="#about" passHref legacyBehavior>
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg font-semibold rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl focus:ring-4 focus:ring-accent/50"
+              className="bg-accent hover:bg-accent/80 text-accent-foreground px-10 py-6 text-lg font-semibold rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl focus:ring-4 focus:ring-accent/50"
             >
               Learn More
             </Button>
@@ -71,3 +72,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

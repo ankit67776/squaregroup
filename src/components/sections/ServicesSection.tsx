@@ -1,10 +1,12 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Settings2, Cloud, BarChartBig, HeartHandshake, ShieldCheck, Code2 } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 
 interface Service {
   id: number;
-  icon: LucideIcon;
+  imageSrc: string; // Using placeholder for now
+  imageAlt: string;
+  dataAiHint: string;
   title: string;
   description: string;
 }
@@ -12,37 +14,49 @@ interface Service {
 const services: Service[] = [
   {
     id: 1,
-    icon: Settings2,
+    imageSrc: 'https://placehold.co/80x80.png',
+    imageAlt: 'IT Strategy and Consulting icon',
+    dataAiHint: 'strategy meeting',
     title: 'IT Strategy & Consulting',
     description: 'Expert guidance to align your IT infrastructure with your business goals for optimal performance and growth.',
   },
   {
     id: 2,
-    icon: Cloud,
+    imageSrc: 'https://placehold.co/80x80.png',
+    imageAlt: 'Cloud Solutions icon',
+    dataAiHint: 'cloud network',
     title: 'Cloud Solutions',
     description: 'Scalable and secure cloud services, from migration to management, tailored to your operational needs.',
   },
   {
     id: 3,
-    icon: BarChartBig,
+    imageSrc: 'https://placehold.co/80x80.png',
+    imageAlt: 'Digital Transformation icon',
+    dataAiHint: 'digital abstract',
     title: 'Digital Transformation',
     description: 'Innovate and modernize your business processes with cutting-edge digital technologies and strategies.',
   },
   {
     id: 4,
-    icon: HeartHandshake,
+    imageSrc: 'https://placehold.co/80x80.png',
+    imageAlt: 'Optimal Customer Experience icon',
+    dataAiHint: 'customer satisfaction',
     title: 'Optimal Customer Experience',
     description: 'Enhance customer satisfaction and loyalty through personalized and seamless digital interactions.',
   },
   {
     id: 5,
-    icon: ShieldCheck,
+    imageSrc: 'https://placehold.co/80x80.png',
+    imageAlt: 'Compliance and Governance icon',
+    dataAiHint: 'data security',
     title: 'Compliance and Governance',
     description: 'Ensure your business adheres to industry regulations and best practices with our robust compliance solutions.',
   },
   {
     id: 6,
-    icon: Code2,
+    imageSrc: 'https://placehold.co/80x80.png',
+    imageAlt: 'Application Development icon',
+    dataAiHint: 'coding interface',
     title: 'Application Development',
     description: 'Custom web and mobile application development to meet your specific business requirements and drive engagement.',
   },
@@ -62,14 +76,22 @@ export default function ServicesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <Card 
               key={service.id} 
-              className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 rounded-lg overflow-hidden group bg-card hover:-translate-y-1.5"
+              className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden group bg-card hover:-translate-y-2 transform"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardHeader className="items-center text-center p-6 bg-card"> {/* Removed bg-primary/5 for cleaner card look */}
-                <div className="p-4 bg-primary text-primary-foreground rounded-full mb-4 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground">
-                  <service.icon className="h-10 w-10" />
+              <CardHeader className="items-center text-center p-6 bg-card">
+                <div className="mb-4 p-3 rounded-full bg-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/20">
+                  <Image
+                    src={service.imageSrc}
+                    alt={service.imageAlt}
+                    width={64} // Adjusted size for icon-like images
+                    height={64}
+                    className="rounded-md object-contain" // Ensure image fits well
+                    data-ai-hint={service.dataAiHint}
+                  />
                 </div>
                 <CardTitle className="text-xl font-semibold text-primary transition-colors duration-300 group-hover:text-accent">
                   {service.title}
