@@ -35,7 +35,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group" onClick={closeMobileMenu}>
             <BriefcaseBusiness className="h-8 w-8 text-primary transition-colors duration-300 group-hover:text-accent" />
-            <span className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">SquareTech Vista</span>
+            <span className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">SquareGroup Technologies</span>
           </Link>
 
           {/* Desktop Navigation */}

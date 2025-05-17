@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group">
               <BriefcaseBusiness className="h-10 w-10 text-sky-400 transition-colors duration-300 group-hover:text-teal-400" />
-              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-sky-400 text-white">SquareTech Vista</span>
+              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-sky-400 text-white">SquareGroup Technologies</span>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
               Empowering businesses with cutting-edge technology solutions tailored to your unique needs. Your trusted partner for innovation and growth.
@@ -88,7 +88,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-sky-400/30 pt-8 text-center">
           <p className="text-sm text-slate-400">
-            &copy; {new Date().getFullYear()} SquareTech Vista. All rights reserved.
+            &copy; {new Date().getFullYear()} SquareGroup Technologies. All rights reserved.
           </p>
         </div>
       </div>

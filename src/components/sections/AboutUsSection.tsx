@@ -12,14 +12,14 @@ export default function AboutUsSection() {
           <div className="order-2 md:order-1 space-y-6">
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 animate-slide-in-left animation-delay-200">
-                About SquareTech Vista
+                About SquareGroup Technologies
               </h2>
               <p className="text-lg sm:text-xl text-primary mb-6 font-semibold animate-slide-in-left animation-delay-400">
                 Empowering Your Business Through Innovative Technology Solutions
               </p>
             </div>
             <p className="text-muted-foreground leading-relaxed text-base sm:text-lg animate-slide-in-left animation-delay-600">
-              At SquareTech Vista, we believe in the transformative power of technology. Our mission is to provide businesses with cutting-edge IT services and strategic consulting that drive growth, efficiency, and a competitive edge in today’s dynamic market.
+              At SquareGroup Technologies, we believe in the transformative power of technology. Our mission is to provide businesses with cutting-edge IT services and strategic consulting that drive growth, efficiency, and a competitive edge in today’s dynamic market.
             </p>
              <p className="text-muted-foreground leading-relaxed text-base sm:text-lg animate-slide-in-left animation-delay-800">
               Our team of seasoned experts is dedicated to understanding your unique challenges and crafting tailored solutions. We foster long-term partnerships built on trust, transparency, and a shared commitment to achieving your business objectives.
