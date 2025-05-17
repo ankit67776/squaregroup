@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -14,7 +15,7 @@ export default function Header() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
-    { label: 'Contact', href: '#contact' }, // This will now correctly scroll to the footer contact section
+    { label: 'Contact', href: '#contact-form' }, 
   ];
 
 
@@ -46,7 +47,7 @@ export default function Header() {
                 </Button>
               </Link>
             ))}
-             <Link href="#contact" legacyBehavior passHref>
+             <Link href="#contact-form" legacyBehavior passHref>
                 <Button className="bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 hover:shadow-md">
                   Get A Quote
                 </Button>
@@ -78,7 +79,7 @@ export default function Header() {
                       </a>
                     </Link>
                   ))}
-                  <Link href="#contact" legacyBehavior passHref>
+                  <Link href="#contact-form" legacyBehavior passHref>
                     <Button onClick={closeMobileMenu} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground mt-4 transition-all duration-300 hover:shadow-md">
                       Get A Quote
                     </Button>

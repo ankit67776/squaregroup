@@ -1,4 +1,6 @@
 
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -15,8 +17,9 @@ export default function ConsultationSection() {
         quality={75}
         className="z-0"
         data-ai-hint="business presentation"
+        priority={false} 
       />
-      <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm z-10"></div>
+      <div className="absolute inset-0 bg-primary/90 backdrop-blur-sm z-10"></div> {/* Adjusted overlay opacity */}
       
       <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
@@ -29,7 +32,7 @@ export default function ConsultationSection() {
           <p className="text-lg sm:text-xl mb-10 text-primary-foreground/90 max-w-2xl mx-auto">
             Ready to transform your business with innovative technology? Contact us today for a free consultation and let's discuss how we can help you achieve your goals.
           </p>
-          <Link href="#contact" passHref legacyBehavior>
+          <Link href="#contact-form" passHref legacyBehavior>
             <Button 
               size="lg" 
               className="bg-accent hover:bg-accent/80 text-accent-foreground px-10 py-7 text-lg font-semibold rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-accent/50 hover:shadow-2xl"
