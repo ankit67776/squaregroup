@@ -2,13 +2,12 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import Image from 'next/image';
+import { Lightbulb, Cloud, Layers, Smile, ShieldCheck, Code } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface Service {
   id: number;
-  imageSrc: string;
-  imageAlt: string;
-  dataAiHint: string;
+  icon: LucideIcon;
   title: string;
   description: string;
 }
@@ -16,49 +15,37 @@ interface Service {
 const services: Service[] = [
   {
     id: 1,
-    imageSrc: 'https://placehold.co/300x200.png',
-    imageAlt: 'IT Strategy and Consulting illustration',
-    dataAiHint: 'strategy meeting',
+    icon: Lightbulb,
     title: 'IT Strategy & Consulting',
     description: 'Expert guidance to align your IT infrastructure with your business goals for optimal performance and growth.',
   },
   {
     id: 2,
-    imageSrc: 'https://placehold.co/300x200.png',
-    imageAlt: 'Cloud Solutions illustration',
-    dataAiHint: 'cloud network',
+    icon: Cloud,
     title: 'Cloud Solutions',
     description: 'Scalable and secure cloud services, from migration to management, tailored to your operational needs.',
   },
   {
     id: 3,
-    imageSrc: 'https://placehold.co/300x200.png',
-    imageAlt: 'Digital Transformation illustration',
-    dataAiHint: 'digital abstract',
+    icon: Layers,
     title: 'Digital Transformation',
     description: 'Innovate and modernize your business processes with cutting-edge digital technologies and strategies.',
   },
   {
     id: 4,
-    imageSrc: 'https://placehold.co/300x200.png',
-    imageAlt: 'Optimal Customer Experience illustration',
-    dataAiHint: 'customer satisfaction',
+    icon: Smile,
     title: 'Optimal Customer Experience',
     description: 'Enhance customer satisfaction and loyalty through personalized and seamless digital interactions.',
   },
   {
     id: 5,
-    imageSrc: 'https://placehold.co/300x200.png',
-    imageAlt: 'Compliance and Governance illustration',
-    dataAiHint: 'data security',
+    icon: ShieldCheck,
     title: 'Compliance and Governance',
     description: 'Ensure your business adheres to industry regulations and best practices with our robust compliance solutions.',
   },
   {
     id: 6,
-    imageSrc: 'https://placehold.co/300x200.png',
-    imageAlt: 'Application Development illustration',
-    dataAiHint: 'software development',
+    icon: Code,
     title: 'Application Development',
     description: 'Custom web and mobile application development to meet your specific business requirements and drive engagement.',
   },
@@ -81,26 +68,19 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <Card 
               key={service.id} 
-              className="flex flex-col shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden group bg-card hover:-translate-y-2 transform"
+              className="flex flex-col shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl overflow-hidden group bg-card hover:-translate-y-2 transform text-center"
               style={{ animationDelay: `${index * 100}ms`, opacity: 0, animation: `fadeInUp 0.5s ease-out ${index * 0.1 + 0.2}s forwards` }}
             >
-              <CardHeader className="p-0">
-                <div className="relative w-full aspect-[3/2]">
-                  <Image
-                    src={service.imageSrc}
-                    alt={service.imageAlt}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-500 group-hover:scale-105"
-                    data-ai-hint={service.dataAiHint}
-                  />
+              <CardHeader className="pt-6 pb-4 items-center">
+                <div className="p-4 bg-primary/10 rounded-full inline-block group-hover:bg-accent/10 transition-colors duration-300 mb-4">
+                  <service.icon className="h-10 w-10 sm:h-12 sm:w-12 text-primary group-hover:text-accent transition-colors duration-300" />
                 </div>
-              </CardHeader>
-              <CardContent className="p-6 flex-grow flex flex-col">
-                 <CardTitle className="text-xl font-semibold text-primary transition-colors duration-300 group-hover:text-accent mb-3 text-center">
+                <CardTitle className="text-xl sm:text-2xl font-semibold text-primary transition-colors duration-300 group-hover:text-accent">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground text-center leading-relaxed flex-grow">
+              </CardHeader>
+              <CardContent className="px-6 pb-6 flex-grow flex flex-col">
+                <CardDescription className="text-muted-foreground leading-relaxed flex-grow">
                   {service.description}
                 </CardDescription>
               </CardContent>
@@ -123,3 +103,4 @@ export default function ServicesSection() {
     </section>
   );
 }
+
