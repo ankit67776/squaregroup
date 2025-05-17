@@ -25,11 +25,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Overview */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <BriefcaseBusiness className="h-10 w-10 text-primary" />
-              <span className="text-2xl font-bold">SquareTech Vista</span>
+            <Link href="/" className="flex items-center gap-2 group">
+              <BriefcaseBusiness className="h-10 w-10 text-primary transition-colors duration-300 group-hover:text-accent" />
+              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-primary">SquareTech Vista</span>
             </Link>
-            <p className="text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-secondary-foreground/80">
               Empowering businesses with cutting-edge technology solutions tailored to your unique needs. Your trusted partner for innovation and growth.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} legacyBehavior passHref>
-                    <a className="hover:text-primary transition-colors text-sm">{link.label}</a>
+                    <a className="hover:text-primary transition-colors duration-300 text-sm">{link.label}</a>
                   </Link>
                 </li>
               ))}
@@ -55,7 +55,7 @@ export default function Footer() {
               {servicesLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} legacyBehavior passHref>
-                    <a className="hover:text-primary transition-colors text-sm">{link.label}</a>
+                    <a className="hover:text-primary transition-colors duration-300 text-sm">{link.label}</a>
                   </Link>
                 </li>
               ))}
@@ -73,20 +73,20 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
                 <div className="flex flex-col">
-                  <a href="tel:+12038937087" className="hover:text-primary transition-colors text-sm">+1 203-893-7087</a>
-                  <a href="tel:+12015645025" className="hover:text-primary transition-colors text-sm">+1 201-564-5025</a>
+                  <a href="tel:+12038937087" className="hover:text-primary transition-colors duration-300 text-sm">+1 203-893-7087</a>
+                  <a href="tel:+12015645025" className="hover:text-primary transition-colors duration-300 text-sm">+1 201-564-5025</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
-                <a href="mailto:info@squaregroupllc.com" className="hover:text-primary transition-colors text-sm">info@squaregroupllc.com</a>
+                <a href="mailto:info@squaregroupllc.com" className="hover:text-primary transition-colors duration-300 text-sm">info@squaregroupllc.com</a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 border-t border-primary/20 pt-8 text-center">
-          <p className="text-sm">
+          <p className="text-sm text-secondary-foreground/70">
             &copy; {new Date().getFullYear()} SquareTech Vista. All rights reserved.
           </p>
         </div>

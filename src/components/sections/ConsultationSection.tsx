@@ -4,7 +4,7 @@ import { PhoneCall } from 'lucide-react';
 
 export default function ConsultationSection() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-r from-primary to-blue-600 text-primary-foreground">
+    <section className="py-16 md:py-24 lg:py-32 bg-primary text-primary-foreground"> {/* Updated background to primary */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <PhoneCall className="h-16 w-16 mx-auto mb-6 text-accent" />
@@ -17,7 +17,7 @@ export default function ConsultationSection() {
           <Link href="#contact" passHref legacyBehavior>
             <Button 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-7 text-lg font-semibold rounded-lg shadow-xl transform transition-transform hover:scale-105 focus:ring-4 focus:ring-accent/50"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-7 text-lg font-semibold rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 focus:ring-4 focus:ring-accent/50 hover:shadow-2xl"
             >
               Contact Us
             </Button>

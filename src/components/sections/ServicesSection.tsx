@@ -63,12 +63,15 @@ export default function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden group bg-card">
-              <CardHeader className="items-center text-center p-6 bg-primary/5">
-                <div className="p-4 bg-primary text-primary-foreground rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+            <Card 
+              key={service.id} 
+              className="flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 rounded-lg overflow-hidden group bg-card hover:-translate-y-1.5"
+            >
+              <CardHeader className="items-center text-center p-6 bg-card"> {/* Removed bg-primary/5 for cleaner card look */}
+                <div className="p-4 bg-primary text-primary-foreground rounded-full mb-4 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground">
                   <service.icon className="h-10 w-10" />
                 </div>
-                <CardTitle className="text-xl font-semibold text-primary group-hover:text-accent transition-colors">
+                <CardTitle className="text-xl font-semibold text-primary transition-colors duration-300 group-hover:text-accent">
                   {service.title}
                 </CardTitle>
               </CardHeader>

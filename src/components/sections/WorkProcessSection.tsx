@@ -51,20 +51,20 @@ export default function WorkProcessSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (
-            <div key={step.id} className="flex flex-col items-center">
-              <Card className="w-full text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card flex flex-col h-full">
+            <div key={step.id} className="flex flex-col items-center group">
+              <Card className="w-full text-center shadow-lg hover:shadow-2xl transition-all duration-300 bg-card flex flex-col h-full hover:-translate-y-1.5">
                 <CardHeader className="pb-4">
-                  <div className="mx-auto bg-accent/10 text-accent rounded-full p-5 w-fit mb-4">
+                  <div className="mx-auto bg-primary/10 text-primary rounded-full p-5 w-fit mb-4 transition-all duration-300 group-hover:bg-accent/10 group-hover:text-accent group-hover:scale-110">
                     <step.icon className="h-12 w-12" />
                   </div>
-                  <CardTitle className="text-xl font-semibold text-primary">{step.title}</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-primary transition-colors duration-300 group-hover:text-accent">{step.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
                 </CardContent>
               </Card>
               {index < processSteps.length -1 && (
-                <ChevronRight className="h-10 w-10 text-primary mt-6 hidden lg:block transform -rotate-90 md:rotate-0" />
+                <ChevronRight className="h-10 w-10 text-primary/70 mt-6 hidden lg:block transform transition-colors duration-300 group-hover:text-accent" />
               )}
             </div>
           ))}
@@ -73,7 +73,7 @@ export default function WorkProcessSection() {
         {/* Mobile/Tablet view for connectors */}
         <div className="mt-8 flex flex-col items-center space-y-8 md:hidden">
            {processSteps.slice(0, -1).map((step) => (
-             <ChevronRight key={`connector-${step.id}`} className="h-8 w-8 text-primary transform rotate-90" />
+             <ChevronRight key={`connector-${step.id}`} className="h-8 w-8 text-primary/70 transform rotate-90" />
            ))}
         </div>
 

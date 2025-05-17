@@ -7,7 +7,7 @@ import { UsersRound, Briefcase, Smile, Users, Award, TrendingUp, CheckCircle2 } 
 const stats = [
   { id: 1, icon: UsersRound, value: 10000, label: 'Clients Active' },
   { id: 2, icon: Briefcase, value: 986, label: 'Projects Completed' },
-  { id: 3, icon: Smile, value: 100, label: 'Happy Clients' }, // Assuming 100% happy clients is meant as 100+
+  { id: 3, icon: Smile, value: 100, label: 'Happy Clients' },
   { id: 4, icon: Users, value: 396, label: 'Skilled Experts' },
   { id: 5, icon: Award, value: 496, label: 'Awards Won' },
 ];
@@ -32,12 +32,12 @@ export default function WhyChooseUsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat) => (
-            <Card key={stat.id} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+            <Card key={stat.id} className="text-center shadow-lg hover:shadow-xl transition-all duration-300 bg-card hover:-translate-y-1.5 group">
               <CardHeader className="pb-2">
-                <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-3">
-                  <stat.icon className="h-10 w-10" />
+                <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-3 transition-colors duration-300 group-hover:bg-accent/10 group-hover:text-accent">
+                  <stat.icon className="h-10 w-10 transform transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <CardTitle className="text-4xl md:text-5xl font-extrabold text-primary">
+                <CardTitle className="text-4xl md:text-5xl font-extrabold text-primary transition-colors duration-300 group-hover:text-accent">
                   <AnimatedCounter endValue={stat.value} />
                 </CardTitle>
               </CardHeader>
@@ -47,12 +47,12 @@ export default function WhyChooseUsSection() {
             </Card>
           ))}
           {percentageStats.map((stat) => (
-             <Card key={stat.id} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+             <Card key={stat.id} className="text-center shadow-lg hover:shadow-xl transition-all duration-300 bg-card hover:-translate-y-1.5 group">
               <CardHeader className="pb-2">
-                 <div className="mx-auto bg-accent/10 text-accent rounded-full p-4 w-fit mb-3">
-                  <stat.icon className="h-10 w-10" />
+                 <div className="mx-auto bg-accent/10 text-accent rounded-full p-4 w-fit mb-3 transition-colors duration-300 group-hover:bg-primary/10 group-hover:text-primary">
+                  <stat.icon className="h-10 w-10 transform transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <CardTitle className="text-4xl md:text-5xl font-extrabold text-accent">
+                <CardTitle className="text-4xl md:text-5xl font-extrabold text-accent transition-colors duration-300 group-hover:text-primary">
                   <AnimatedCounter endValue={stat.value} isPercentage={stat.isPercentage} />
                 </CardTitle>
               </CardHeader>
