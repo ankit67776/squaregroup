@@ -83,7 +83,7 @@ export default function WhyChooseUsSection() {
       <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
-            Why Choose SquareTech Vista
+            Why Choose SquareGroup Technologies 
           </h2>
           <p className="text-lg sm:text-xl text-foreground/80 max-w-3xl mx-auto">
             Small team. Big impact. We're dedicated to your success by focusing on what truly matters for your business.
