@@ -67,7 +67,7 @@ export default function Header() {
                 <div className="flex flex-col space-y-4">
                   <Link href="/" className="flex items-center gap-2 mb-4 group" onClick={closeMobileMenu}>
                      <BriefcaseBusiness className="h-8 w-8 text-primary transition-colors duration-300 group-hover:text-accent" />
-                    <span className="text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">SquareTech Vista</span>
+                    <span className="text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">SquareGroup Technologies</span>
                   </Link>
                   {navItems.map((item) => (
                     <Link key={item.label} href={item.href} legacyBehavior passHref>
