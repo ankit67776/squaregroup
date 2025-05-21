@@ -74,8 +74,13 @@ export default function Header() {
               <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
                 <div className="flex flex-col space-y-4">
                   <Link href="/" className="flex items-center gap-2 mb-4 group" onClick={closeMobileMenu}>
-                     <BriefcaseBusiness className="h-8 w-8 text-primary transition-colors duration-300 group-hover:text-accent" />
-                    <span className="text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">SquareGroup Technologies</span>
+                     <Image 
+                      src="/images/logo.png" 
+                      alt="SquareGroup Technologies Logo" 
+                      width={150} 
+                      height={30} 
+                      className="object-contain"
+                    />
                   </Link>
                   {navItems.map((item) => (
                     <Link key={item.label} href={item.href} legacyBehavior passHref>
