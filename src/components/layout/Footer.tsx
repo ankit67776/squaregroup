@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { BriefcaseBusiness, MapPin, Phone, Mail } from 'lucide-react';
-
+import Image from 'next/image';
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '#services' },
@@ -27,8 +27,14 @@ export default function Footer() {
           {/* Company Overview */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group">
-              <BriefcaseBusiness className="h-10 w-10 text-sky-400 transition-colors duration-300 group-hover:text-teal-400" />
-              <span className="text-2xl font-bold transition-colors duration-300 group-hover:text-sky-400 text-white">SquareGroup Technologies</span>
+              <Image 
+                src="/images/logo.png" 
+                alt="SquareGroup Technologies Logo" 
+                width={200} 
+                height={40} 
+                className="object-contain bg-white rounded-md h-20 w-20" // Adjust height as needed, width will scale
+              />
+              
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
               Empowering businesses with cutting-edge technology solutions tailored to your unique needs. Your trusted partner for innovation and growth.

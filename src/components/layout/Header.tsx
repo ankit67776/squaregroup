@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, BriefcaseBusiness } from 'lucide-react'; 
+import Image from 'next/image';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,8 +35,15 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group" onClick={closeMobileMenu}>
-            <BriefcaseBusiness className="h-8 w-8 text-primary transition-colors duration-300 group-hover:text-accent" />
-            <span className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">SquareGroup Technologies</span>
+            {/* <BriefcaseBusiness className="h-8 w-8 text-primary transition-colors duration-300 group-hover:text-accent" />
+            <span className="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">SquareGroup Technologies</span> */}
+            <Image 
+              src="/images/logo.png" 
+              alt="SquareGroup Technologies Logo" 
+              width={170} 
+              height={34} 
+              className="object-contain h-20 w-20" // Adjust height as needed, width will scale
+            />
           </Link>
 
           {/* Desktop Navigation */}
