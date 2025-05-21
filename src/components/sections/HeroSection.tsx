@@ -42,7 +42,7 @@ export default function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="text-white border-white hover:bg-white hover:text-primary px-10 py-6 text-lg font-semibold rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl focus:ring-4 focus:ring-white/50"
+              className="bg-transparent text-white border-white hover:bg-white hover:text-primary px-10 py-6 text-lg font-semibold rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl focus:ring-4 focus:ring-white/50"
             >
               Contact Us
             </Button>

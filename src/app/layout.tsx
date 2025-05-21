@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'SquareTech Vista',
+  title: 'SquareGroup Technologies',
   description: 'Welcome To Your Trusted Technology Partner - Square Group Technologies',
 };
 

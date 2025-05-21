@@ -18,7 +18,7 @@ interface WhyChooseUsPoint {
   icon: LucideIcon;
   title: string;
   description: string;
-  imageHint: string;
+  imageSrc: string;
 }
 
 const whyChooseUsPoints: WhyChooseUsPoint[] = [
@@ -27,42 +27,43 @@ const whyChooseUsPoints: WhyChooseUsPoint[] = [
     icon: UsersRound,
     title: 'Client-First Approach',
     description: 'We work closely with every client to deliver personalized, impactful solutions tailored to your unique needs.',
-    imageHint: 'client meeting handshake',
+    imageSrc: '/images/whyChooseUs/client-first.jpg',
+
   },
   {
     id: 2,
     icon: Rocket,
     title: 'Startup Energy, Enterprise Mindset',
     description: "We're agile and innovative, focused on helping your business grow with the right technology and strategic thinking.",
-    imageHint: 'innovation lightbulb idea',
+    imageSrc: '/images/whyChooseUs/startup-energy.jpg',
   },
   {
     id: 3,
     icon: Lightbulb,
     title: 'Innovative Solutions',
     description: 'We leverage cutting-edge tools and creative strategies to solve complex challenges and drive your business forward.',
-    imageHint: 'creative solution puzzle',
+    imageSrc: '/images/whyChooseUs/innovative-solution.jpg',
   },
   {
     id: 4,
     icon: LifeBuoy,
     title: 'Dedicated Support',
     description: 'From initial planning to post-deployment, our team is committed to providing ongoing support and partnership.',
-    imageHint: 'customer support friendly',
+    imageSrc: '/images/whyChooseUs/dedicated-support.jpg',
   },
   {
     id: 5,
     icon: ShieldCheck,
     title: 'Security & Scalability Focused',
     description: 'Our solutions are built with robust security and future growth in mind, ensuring they adapt as your business evolves.',
-    imageHint: 'data security lock',
+    imageSrc: '/images/whyChooseUs/security.jpg'
   },
   {
     id: 6,
     icon: TrendingUp,
     title: 'Results-Driven Focus',
     description: "We are committed to delivering measurable results that contribute directly to your business success and objectives.",
-    imageHint: 'business growth chart arrow',
+    imageSrc: '/images/whyChooseUs/result-driven.jpg',
   }
 ];
 
@@ -104,11 +105,11 @@ export default function WhyChooseUsSection() {
                   <Card className="flex flex-col h-full shadow-lg bg-card/80 backdrop-blur-md overflow-hidden">
                     <div className="relative w-full aspect-video">
                        <Image
-                        src={`https://placehold.co/600x338.png`} // 16:9 aspect ratio
+                        src={point.imageSrc} // 16:9 aspect ratio
                         alt={point.title}
                         layout="fill"
                         objectFit="cover"
-                        data-ai-hint={point.imageHint}
+                        className="transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                     <CardContent className="p-6 flex flex-col items-center text-center flex-grow">
