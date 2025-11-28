@@ -87,7 +87,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 mt-1 text-sky-400 flex-shrink-0" />
-                <a href="mailto:info@squaregroupllc.com" className="hover:text-sky-400 transition-colors duration-300 text-sm">info@squaregroupllc.com</a>
+                <a href="mailto:support@squaregroup.tech" className="hover:text-sky-400 transition-colors duration-300 text-sm">support@squaregroup.tech</a>
               </li>
             </ul>
           </div>
