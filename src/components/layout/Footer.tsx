@@ -7,6 +7,7 @@ const quickLinks = [
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact-form' }, // Updated to point to contact form
+  {label: 'Privacy Policy', href: '/privacy-policy' },
 ];
 
 const servicesLinks = [
