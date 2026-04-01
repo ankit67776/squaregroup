@@ -81,13 +81,11 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 mt-1 text-sky-400 flex-shrink-0" />
                 <div className="flex flex-col">
-                  <a href="tel:+12038937087" className="hover:text-sky-400 transition-colors duration-300 text-sm">+1 203-893-7087</a>
-                  <a href="tel:+12015645025" className="hover:text-sky-400 transition-colors duration-300 text-sm">+1 201-564-5025</a>
+                  
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 mt-1 text-sky-400 flex-shrink-0" />
-                <a href="mailto:support@squaregroup.tech" className="hover:text-sky-400 transition-colors duration-300 text-sm">support@squaregroup.tech</a>
+                
               </li>
             </ul>
           </div>
